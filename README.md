@@ -39,7 +39,7 @@ mkdir -p ~/Projects/box && cd ~/Projects/box
 
 cat hardhat.config.js
 
-`
+
 require("dotenv").config();
 require("@nomiclabs/hardhat-ethers");
 const { API_URL, PRIVATE_KEY } = process.env;
@@ -57,7 +57,7 @@ module.exports = {
     version: "0.8.22"
     }
   };
-`
+
 * verify dependencies:
 
 cat package.json 
