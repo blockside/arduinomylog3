@@ -182,13 +182,13 @@ Deploying Box...
 Box deployed to: 0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01
 
 .... the smart contract is now on the Ethereum (testnet) HOLESKY chain!
-In this case:
+In this case:  
 https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01
 
-Optional: if you make the smart contract verified, then anyone can interact with it directly from Etherscan.
-For example have a look at:
-https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01#readContract
-then click under function "retrieve" and the output will be latest temperature value like:
+Optional: if you make the smart contract verified, then anyone can interact with it directly from Etherscan.  
+For example have a look at:  
+https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01#readContract  
+then click under function "retrieve" and the output will be latest temperature value like:  
 2030 uint256   -----> 20.30 °C
 
 * Retrieve Arduino json Data:
@@ -217,8 +217,8 @@ node ~/Projects/box/scripts/get_json.js
 
 OUTPUT:
 
-Location: Trento - Italy
-Temperature Celsius: 20.31
+Location: Trento - Italy  
+Temperature Celsius: 20.31  
 Temperature Fahrenheit: 68.56
 
 * Check the script that will store json data into Holesky Blockchain:
@@ -265,12 +265,12 @@ npx hardhat run --network holesky ~/Projects/box/scripts/store_json.js
 
 OUTPUT:
 
-Temperature retrieved from JSON: 2155
+Temperature retrieved from JSON: 2155  
 Temperature stored into blockchain: 2155
 
 ## Monitor
 
-See your data on blockchain (they are accessible to anyone) by visiting a blockchain explorer; 
+See your data on blockchain (they are accessible to anyone) by visiting a blockchain explorer;  
 in this case:
 
 https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01
