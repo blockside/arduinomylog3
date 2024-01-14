@@ -7,10 +7,10 @@ This project will store into an Ethereum based Blockchain, the data of temperatu
 
 ## Quick links and licensing references
 
-- [Ethereum is a network of computers all over the world that follow a set of rules called the Ethereum protocol](https://ethereum.org)
-- [Hardhat is an Ethereum development environment for professionals](https://hardhat.org)
-- [Arduino is an open-source electronics platform](https://www.arduino.cc)
-- [TMP36 library is a very simple Arduino library](https://github.com/Isaacr100/TMP36)
+- [Ethereum is a network of computers all over the world that follow a set of rules called the Ethereum protocol] (https://ethereum.org)
+- [Hardhat is an Ethereum development environment for professionals] (https://hardhat.org)
+- [Arduino is an open-source electronics platform] (https://www.arduino.cc)
+- [TMP36 library is a very simple Arduino library] (https://github.com/Isaacr100/TMP36)
 
 ## Tested for
 
