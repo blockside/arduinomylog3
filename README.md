@@ -39,7 +39,7 @@ mkdir -p ~/Projects/box && cd ~/Projects/box
 
 cat hardhat.config.js
 
-
+```javascript
 require("dotenv").config();
 require("@nomiclabs/hardhat-ethers");
 const { API_URL, PRIVATE_KEY } = process.env;
@@ -57,11 +57,12 @@ module.exports = {
     version: "0.8.22"
     }
   };
-
+```
 * verify dependencies:
 
 cat package.json 
 
+```json
 ...
   "keywords": [],
   "author": "",
@@ -81,6 +82,7 @@ cat package.json
     "dotenv": "^16.3.1"
   }
 ....
+```
 
 * Add project folders
 
@@ -90,6 +92,7 @@ mkdir ~/Projects/box/contracts ~/Projects/box/scripts
 
 cat ~/Projects/box/contracts/box.sol
 
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.22;
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -105,19 +108,22 @@ contract Box is Ownable {
         return _value;
     }
 }
-
+```
 
 * Verify your Execution Layer:
 
+```shell
 curl -sX POST \
 http://[RPC_ENDPOINT_HERE:PORT_HERE] \
 -H "Content-Type: application/json" \
 -d '{"method":"eth_chainId","params":[],"id":1,"jsonrpc":"2.0"}' | json_pp
+```
 
 * Verify that is Holesky Testnet:
 
+```shell
 echo $((16#4268))
-
+```
 * if you do not have a running Execution Layer node, just use one from the following list:
 
 https://chainlist.org/chain/17000
@@ -126,9 +132,11 @@ https://chainlist.org/chain/17000
 
 cat ~/Projects/box/.env
 
+```shell
 API_URL="http://[EXECUTION_LAYER_HERE:PORT_HERE]"
 PUBLIC_KEY="[YOUR_PUBLIC_ADDRESS_HERE]"
 PRIVATE_KEY="[YOUR_PRIVATE_KEY_HERE]"
+```
 
 * Compile the smart contract:
 
@@ -142,6 +150,7 @@ Compiled 1 Solidity file successfully (evm target: paris).
 
 cat ~/Projects/box/scripts/deploy.js
 
+```javascript
 async function main () {
   const Box = await ethers.getContractFactory('Box');
   console.log('Deploying Box...');
@@ -155,11 +164,13 @@ main()
     console.error(error);
     process.exit(1);
   });
+```
 
 * Deploy the smart contract into Holesky Testnet:
 
+```shell
 npx hardhat --network holesky run scripts/deploy.js
-
+```
 OUTPUT:
 
 Deploying Box...
@@ -179,6 +190,7 @@ then click under function "retrieve" and the output will be latest temperature v
 
 cat ~/Projects/box/scripts/get_json.js
 
+```javascript
 const axios = require('axios');
 const url = 'http://[ARDUINO_WEBSERVER_HERE]';
 axios.get(url)
@@ -192,6 +204,7 @@ axios.get(url)
   .catch(error => {
     console.error('Errore during HTTP request:', error.message);
   });
+```
 
 * Verify data:
 
@@ -207,6 +220,7 @@ Temperature Fahrenheit: 68.56
 
 cat ~/Projects/box/scripts/store_json.js
 
+```javascript
 const axios = require('axios');
 const url = 'http://[ARDUINO_WEBSERVER_HERE]';
 axios.get(url)
@@ -234,7 +248,7 @@ axios.get(url)
   const value = await box.retrieve();
   console.log('Temperature stored into blockchain:', value.toString());
 };
-
+```
 
 ## Usage
 
