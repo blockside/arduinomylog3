@@ -278,5 +278,5 @@ https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01
 
 ## Optional
 
-Insert the script into crontab to have the temperature data into blockchain. 
+Insert the script into crontab to have the temperature data into blockchain.  
 Note that Ethereum Holesky is a testnet but other blockchains could cost money for transactions.
