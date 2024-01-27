@@ -273,10 +273,20 @@ Temperature stored into blockchain: 2155
 See your data on blockchain (they are accessible to anyone) by visiting a blockchain explorer;  
 in this case:
 
-https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01
-
+[https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01](https://holesky.etherscan.io/address/0x9247D54ab2A5B6Ad46ee0f911CEDFCe4f01aAF01#events)
+then in the drop-down menu change from "Hex" to "Number"
 
 ## Optional
 
-Insert the script into crontab to have the temperature data into blockchain.  
+Insert the script into crontab to have the temperature data into blockchain so that you have an example log similar to this one:
+🕑 2024-01-27 15:28:01 CET
+🟩 Poweron container:
+lanholesky_hardhat
+🕑 2024-01-27 15:30:01 CET
+⛏ Write temperature into blockchain:
+Temperature value: 1152
+🕑 2024-01-27 15:33:01 CET
+🟥 Poweroff container:
+lanholesky_hardhat
+
 Note that Ethereum Holesky is a testnet but other blockchains could cost money for transactions.
