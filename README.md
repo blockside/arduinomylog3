@@ -283,13 +283,13 @@ Insert the script into crontab to have the temperature data into blockchain so t
 ```shell
 🕑 2024-01-27 15:28:01 CET
 🟩 Poweron container:
-lanholesky_hardhat
+container_hh
 🕑 2024-01-27 15:30:01 CET
 ⛏ Write temperature into blockchain:
 Temperature value: 1152
 🕑 2024-01-27 15:33:01 CET
 🟥 Poweroff container:
-lanholesky_hardhat
+container_hh
 ```
 
 Note that Ethereum Holesky is a testnet but other blockchains could cost money for transactions.
